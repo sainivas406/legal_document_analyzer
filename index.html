@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Document Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <header>
+      <h1>⚖️ Legal Document Analyzer</h1>
+      <p>Analyze legal case files and extract important clauses and legal entities</p>
+      <p class="quote">"Justice delayed is justice denied."</p>
+    </header>
+
+    <div class="upload-box">
+      <h2>📂 Upload Legal Document</h2>
+      <input type="file" id="fileInput" accept=".txt" />
+      <button onclick="analyzeDocument()">Analyze Document</button>
+    </div>
+
+    <div class="card">
+      <h2>📝 Summary</h2>
+      <div id="summaryBox" class="summary-box">No summary available yet.</div>
+    </div>
+
+    <div class="section">
+      <h2>📄 Uploaded Legal Text</h2>
+      <pre id="documentText">No file uploaded yet.</pre>
+    </div>
+
+    <div class="section">
+      <h2>📌 Extracted Clauses</h2>
+      <div id="clausesList" class="box-list"></div>
+    </div>
+
+    <div class="section">
+      <h2>🏷️ Extracted Legal Entities</h2>
+      <div id="entitiesList" class="box-list"></div>
+    </div>
+
+    <div class="bottom-download">
+      <button class="download-btn" onclick="downloadResults()">⬇️ Download Result</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
