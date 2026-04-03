@@ -18,7 +18,7 @@
 
     <div class="upload-box">
       <h2>📂 Upload Legal Document</h2>
-      <input type="file" id="fileInput" accept=".txt" />
+      <input type="file" id="fileInput" accept=".txt,.pdf,.docx,.html,.htm,.md,.json" />
       <button onclick="analyzeDocument()">Analyze Document</button>
     </div>
 
@@ -41,11 +41,13 @@
       <h2>🏷️ Extracted Legal Entities</h2>
       <div id="entitiesList" class="box-list"></div>
     </div>
-
-    <div class="bottom-download">
-      <button class="download-btn" onclick="downloadResults()">⬇️ Download Result</button>
-    </div>
   </div>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+
+  <!-- Mammoth.js -->
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
 
   <script src="script.js"></script>
 </body>
